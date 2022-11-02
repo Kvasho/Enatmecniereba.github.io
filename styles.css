@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MyWebFont";
+  src: url("./Assets/Fonts/bpg_nino_mtavruli_bold.ttf");
+}
+
+@font-face {
+  font-family: "beka";
+  src: url("./Assets/Fonts/beka.ttf");
+}
+
+@font-face {
+  font-family: "aladini";
+  src: url("./Assets/Fonts/aladini.ttf");
+}
+
+@font-face {
+  font-family: "barata";
+  src: url("./Assets/Fonts/barata.ttf");
+}
+
+@font-face {
+  font-family: "barata";
+  src: url("./Assets/Fonts/adamiani.ttf");
+}
+
+html {
+  font-family: "myWebFont";
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  position: absolute;
+  top: 0;
+  z-index: 12;
+}
+
+.header-logo {
+  font-size: 30px;
+  color: aliceblue;
+}
+
+nav a {
+  font-size: 16px;
+  text-decoration: none;
+  color: antiquewhite;
+  padding: 0 10px;
+  padding-bottom: 10px;
+  font-family: "MyWebFont";
+}
+
+nav a:hover {
+  color: antiquewhite;
+  border-bottom: 2px solid antiquewhite;
+}
+
+.landing {
+  position: relative;
+  height: 100vh;
+}
+
+.landing-background {
+  background-image: url("./Assets/images/wallpaper.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: blur(7px);
+}
+
+.spinner-border {
+  position: absolute;
+}
+
+/* LANDING FIND */
+
+.landing-find {
+  width: 50%;
+  margin: auto;
+}
+
+.button {
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-family: "MyWebFont";
+  font-size: 16px;
+  background: antiquewhite;
+  color: black;
+}
+
+.button:hover {
+  background: black;
+  color: antiquewhite;
+}
+
+#formBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#detailedBody {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 30px;
+}
+
+.form-body-input {
+  border: none;
+  text-indent: 15px;
+  height: 50px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  font-family: "MyWebFont";
+}
+
+.form-body-input:focus {
+  outline: none;
+}
+
+.form-select {
+  background: antiquewhite !important;
+  font-family: "MyWebFont";
+}
+
+.scale-out-center {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+.find-word {
+  background: #31c54a32;
+  color: antiquewhite;
+  border: none;
+  border-radius: 10px;
+  font-family: "MyWebFont";
+}
+
+.find-word:hover {
+  background: #31c54a8e;
+}
+
+.form-select {
+  height: 50px !important;
+}
+
+.find-header {
+  font-size: 40px;
+  text-align: center;
+  padding: 250px 0 0 0;
+  letter-spacing: 10px;
+  font-family: "barata" !important;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+.found-word {
+  color: wheat;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 250px;
+}
+
+@media (max-width: 1350px) {
+  nav a {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 30px;
+  }
+}
+
+.dictionery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 250px;
+}
+
+.dictionery h2 {
+  font-size: 30px;
+  font-family: "MyWebFont";
+}
+
+.dictionery ul {
+  list-style: none;
+  font-size: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 45px;
+  padding-top: 40px;
+  color: rgb(25, 25, 176);
+  font-family: "MyWebFont";
+}
+
+.dictionery ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+}
+
+.dictionery ul li a:hover {
+  background-color: black;
+  color: antiquewhite;
+  border-radius: 10px;
+}
+
+.footer {
+  background: #222831;
+  height: auto;
+  width: 100%;
+  color: antiquewhite;
+  position: absolute;
+}
+
+.footer-wr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 70px 100px;
+  grid-gap: 100px;
+  text-align: center;
+}
+
+.footer-wr h4 {
+  margin-bottom: 30px;
+}
+
+.footer-about-us p {
+  color: antiquewhite;
+}
+
+.footer-social-icons img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-authors a {
+  display: block;
+  color: antiquewhite;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  display: block;
+  color: antiquewhite;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.footer-contact-us h5 {
+  font-size: 14px;
+}
+
+.footer-contact-us img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-adress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.header-black {
+  background: rgb(95, 95, 95);
+}
+
+.header-black a {
+  color: black;
+  height: 100px;
+}
+
+.header-black a:hover {
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.bank {
+  padding-bottom: 150px;
+}
+
+.bank-card {
+  font-family: 'MyWebFont' !important;
+  width: fit-content;
+  margin: auto;
+}
+
+.bank-card h3 {
+  font-family: 'MyWebFont';
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.bank h1 {
+  font-family: "barata" !important;
+  padding-top: 200px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.bank-card-lang {
+  background: rgb(247, 241, 241);
+  width: 850px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bank-card-lang p {
+  font-family: 'MyWebFont';
+  margin-bottom: 20px;
+}
+
+.bank-card-lang span {
+  border-bottom: 2px solid black;
+  margin-right: 40px;
+  line-height: 25px;
+}

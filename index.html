@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <a href="./index.html"> <img src="" alt="" />LOGO </a>
+      </div>
+
+      <nav>
+        <a href="./index.html">მთავარი</a>
+        <a href="./termin-bank.html">ტერმინთსაცავი</a>
+        <a href="">ტერმინთ ლექსიკონები</a>
+        <a href="">ნაშრომები</a>
+        <a href="">თემატური ლექსიკონები</a>
+        <a href="">ტერმინთა ავტორები</a>
+        <a href="">კონტაქტი</a>
+      </nav>
+    </header>
+    <section class="landing">
+      <div class="landing-background"></div>
+      <div class="landing-find">
+        
+        <div class="landing-wr" id="findDash">
+          <h1 class="find-header">Zieba</h1>
+          <button class="button" onclick={findlHandler()}>ზუსტი ძიება</button>
+          <button class="button" onclick={detailHandler()}>დეტალური ძიება</button>
+          <div id="formBody">
+            <input type="text" placeholder="სიტყვა/ტერმინი" class="form-body-input">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>ენა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <button class="find-word" onclick="showFoundWord()">ძიება</button>
+          </div>
+          <div id="detailedBody">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>სიტყვა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>ენა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>სიტყვა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>ენა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>სიტყვა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>სიტყვა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>სიტყვა</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <button class="find-word" onclick="showFoundWord()">ძიება</button>
+          </div>  
+        </div>
+        <div class="found-word" id="founded">
+          <h3 class="found-word-header">დნობადი</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+    </section>
+    <section class="dictionery">
+      <h2>ლექსიკონები</h2>
+      <ul>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+        <li><a href="./index.html">ლექსიკონი</a></li>
+      </ul>
+    </section>
+    <footer class="footer">
+      <div class="footer-wr">
+        <div class="footer-about-us">
+          <h4>ჩვენს შესახებ</h4>
+          <p>Far far away, behind the word mountains, 
+            far from the countries
+             Vokalia and Consonantia, there live the blind texts.
+          </p>
+          <div class="footer-social-icons">
+            <a href=""><img src="./Assets/images/facebook-svgrepo-com.svg" alt=""></a>
+            <a href=""><img src="./Assets/images/twitter.svg" alt=""></a>
+            <a href=""><img src="./Assets/images/instagram.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-authors">
+          <h4>ავტორები</h4>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+        </div>
+        <div class="footer-links">
+          <h4>სასარგებლო ბმულები</h4>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+          <a href="./index.html">TEST TEST TTEST</a>
+        </div>
+        <div class="footer-contact-us">
+          <h4>დაგვიკავშირდით</h4>
+          <div class="footer-adress">
+            <img src="./Assets/images/pin.svg" alt="Pin">
+            <h5>203 Fake St. Mountain View, San Francisco, California, USA</h5>
+          </div>
+          <div class="footer-adress">
+            <img src="./Assets/images/phone.svg" alt="Pin">
+            <h5>+2 392 3929 210</h5>
+          </div>
+          <div class="footer-adress">
+            <img src="./Assets/images/email.svg" alt="Pin">
+            <h5>	info@yourdomain.com</h5>
+          </div>
+        </div>
+      </div>
+     
+    </footer>
+   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init();</script>
+       <script src="./actions.js"></script>
+    </div>
+  </body>
+</html>
