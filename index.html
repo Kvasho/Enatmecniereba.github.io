@@ -1,181 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-logo">
-        <a href="./index.html"> <img src="" alt="" />LOGO </a>
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" type="image/x-icon" href="./image/Logo.png" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+      <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+      <link
+         href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+         rel="stylesheet"
+         />
+      <link rel="stylesheet" href="./css/styles.css" />
+      <title>თავდაცვის სამინისტრო</title>
+   </head>
+   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+      <!-- TOP NAV -->
+      <div class="top-nav" id="home">
+         <div class="container">
+            <div class="row justify-content-between">
+               <div class="col-auto">
+                  <p><i class="bx bxs-envelope"></i> mod@example.com</p>
+                  <p><i class="bx bxs-phone-call"></i> (888) 8888-8888</p>
+               </div>
+               <div class="col-auto social-icons">
+                  <a href="./news.html"><i class="bx bxl-facebook"></i></a>
+                  <a href="./news.html"><i class="bx bxl-twitter"></i></a>
+                  <a href="./news.html"><i class="bx bxl-instagram"></i></a>
+                  <a href="./news.html"><i class="bx bxl-pinterest"></i></a>
+               </div>
+            </div>
+         </div>
       </div>
-
-      <nav>
-        <a href="./index.html">მთავარი</a>
-        <a href="./termin-bank.html">ტერმინთსაცავი</a>
-        <a href="">ტერმინთ ლექსიკონები</a>
-        <a href="">ნაშრომები</a>
-        <a href="">თემატური ლექსიკონები</a>
-        <a href="">ტერმინთა ავტორები</a>
-        <a href="">კონტაქტი</a>
+      <!-- BOTTOM NAV -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+         <div class="container">
+            <a href="./index.html"
+               ><img class="header-logo" src="./image/Logo.png" alt="Logo"
+               /></a>
+            <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="collapse"
+               data-bs-target="#navbarNav"
+               aria-controls="navbarNav"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                     <a class="nav-link geo-font" href="#home">მთავარი</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#news">სიახლეები</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#projects">პროექტები</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#team">გუნდი</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#career">სამინისტროს შესახებ</a>
+                  </li>
+                  </li>
+               </ul>
+               <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  class="btn btn-brand ms-lg-3"
+                  >შემოგვიერთდი</a
+                  >
+            </div>
+         </div>
       </nav>
-    </header>
-    <section class="landing">
-      <div class="landing-background"></div>
-      <div class="landing-find">
-        
-        <div class="landing-wr" id="findDash">
-          <h1 class="find-header">Zieba</h1>
-          <button class="button" onclick={findlHandler()}>ზუსტი ძიება</button>
-          <button class="button" onclick={detailHandler()}>დეტალური ძიება</button>
-          <div id="formBody">
-            <input type="text" placeholder="სიტყვა/ტერმინი" class="form-body-input">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>ენა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <button class="find-word" onclick="showFoundWord()">ძიება</button>
-          </div>
-          <div id="detailedBody">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>სიტყვა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>ენა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>სიტყვა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>ენა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>სიტყვა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>სიტყვა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>სიტყვა</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <button class="find-word" onclick="showFoundWord()">ძიება</button>
-          </div>  
-        </div>
-        <div class="found-word" id="founded">
-          <h3 class="found-word-header">დნობადი</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
+      <!-- SLIDER -->
+      <div class="owl-carousel owl-theme hero-slider">
+         <div class="slide slide1">
+            <div class="container">
+               <img class="background-image" src="./image/IMG_3695.jpg" alt="" />
+               <div class="row">
+                  <div class="col-12 text-center text-white">
+                     <h6 class="text-white text-uppercase">ვემსახურები საქართველოს</h6>
+                     <h1 class="display-3 my-4">
+                        სწავლებები გრძელდება<br />აიმაღლე გამოცდილება
+                     </h1>
+                     <a href="./news.html" class="btn btn-brand">შემოგვიერთდი</a>
+                     <a href="./news.html" class="btn btn-outline-light ms-3">სამუშაოები</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="slide slide2">
+            <div class="container">
+               <img class="background-image" src="./image/humanitar.jpg" alt="" />
+               <div class="row">
+                  <div class="col-12 col-lg-10 offset-lg-1 text-white">
+                     <h6 class="text-white text-uppercase">ჰუმანიტარული მისია</h6>
+                     <h1 class="display-3 my-4">
+                        სამხედროები ავღანეთში <br />პროფესიონალი
+                     </h1>
+                     <a href="./news.html" class="btn btn-brand">შემოგვიერთდი</a>
+                     <a href="./news.html" class="btn btn-outline-light ms-3">გაიგე მეტი</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="slide slide2">
+            <div class="container">
+               <img class="background-image" src="./image/IMG_0820.jpg" alt="" />
+               <div class="row">
+                  <div class="col-12 col-lg-10 offset-lg-1 text-white">
+                     <h6 class="text-white text-uppercase">საველე წვრთნები</h6>
+                     <h1 class="display-3 my-4">
+                        ამერიკელი ინსტრუქტორები <br />უახლესი შეიარაღება
+                     </h1>
+                     <a href="./news.html" class="btn btn-brand">შემოგვიერთდი</a>
+                     <a href="./news.html" class="btn btn-outline-light ms-3">გაიგე მეტი</a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </section>
-    <section class="dictionery">
-      <h2>ლექსიკონები</h2>
-      <ul>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-        <li><a href="./index.html">ლექსიკონი</a></li>
-      </ul>
-    </section>
-    <footer class="footer">
-      <div class="footer-wr">
-        <div class="footer-about-us">
-          <h4>ჩვენს შესახებ</h4>
-          <p>Far far away, behind the word mountains, 
-            far from the countries
-             Vokalia and Consonantia, there live the blind texts.
-          </p>
-          <div class="footer-social-icons">
-            <a href=""><img src="./Assets/images/facebook-svgrepo-com.svg" alt=""></a>
-            <a href=""><img src="./Assets/images/twitter.svg" alt=""></a>
-            <a href=""><img src="./Assets/images/instagram.svg" alt=""></a>
-          </div>
-        </div>
-        <div class="footer-authors">
-          <h4>ავტორები</h4>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-        </div>
-        <div class="footer-links">
-          <h4>სასარგებლო ბმულები</h4>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-          <a href="./index.html">TEST TEST TTEST</a>
-        </div>
-        <div class="footer-contact-us">
-          <h4>დაგვიკავშირდით</h4>
-          <div class="footer-adress">
-            <img src="./Assets/images/pin.svg" alt="Pin">
-            <h5>203 Fake St. Mountain View, San Francisco, California, USA</h5>
-          </div>
-          <div class="footer-adress">
-            <img src="./Assets/images/phone.svg" alt="Pin">
-            <h5>+2 392 3929 210</h5>
-          </div>
-          <div class="footer-adress">
-            <img src="./Assets/images/email.svg" alt="Pin">
-            <h5>	info@yourdomain.com</h5>
-          </div>
-        </div>
+      <section id="news" class="text-center">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="intro">
+                     <h6>...</h6>
+                     <h1>სიახლეები</h1>
+                     <p class="mx-auto">
+                        მინისტრებმა საქართველოსა და რუმინეთის თავდაცვის უწყებებს შორის
+                        ორმხრივი თანამშრომლობის საკითხებიც განიხილეს. ყურადღება
+                        გამახვილდა საქართველოს ევროპუ
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row g-4">
+               <div class="col-lg-4 col-md-6">
+                  <a href="./news.html"
+                     >
+                     <div class="service">
+                        <img src="./image/icon_1.png" alt="" />
+                        <h5>სამინისტრო</h5>
+                        <p>
+                           მინისტრებმა საქართველოსა და რუმინეთის თავდაცვის უწყებებს შორის
+                           ორმხრივი თანამშრომლობის საკითხებიც განიხილეს. ყურადღება
+                           გამახვილდა საქართველოს ევროპუ
+                        </p>
+                     </div>
+                  </a
+                     >
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <a href="./news.html"
+                     >
+                     <div class="service">
+                        <img src="./image/icon_1.png" alt="" />
+                        <h5>სამინისტრო</h5>
+                        <p>
+                           მინისტრებმა საქართველოსა და რუმინეთის თავდაცვის უწყებებს შორის
+                           ორმხრივი თანამშრომლობის საკითხებიც განიხილეს. ყურადღება
+                           გამახვილდა საქართველოს ევროპუ
+                        </p>
+                     </div>
+                  </a
+                     >
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <a href="./news.html"
+                     >
+                     <div class="service">
+                        <img src="./image/icon_1.png" alt="" />
+                        <h5>სამინისტრო</h5>
+                        <p>
+                           მინისტრებმა საქართველოსა და რუმინეთის თავდაცვის უწყებებს შორის
+                           ორმხრივი თანამშრომლობის საკითხებიც განიხილეს. ყურადღება
+                           გამახვილდა საქართველოს ევროპუ
+                        </p>
+                     </div>
+                  </a
+                     >
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <a href="./news.html"
+                     >
+                     <div class="service">
+                        <img src="./image/icon_1.png" alt="" />
+                        <h5>სამინისტრო</h5>
+                        <p>
+                           მინისტრებმა საქართველოსა და რუმინეთის თავდაცვის უწყებებს შორის
+                           ორმხრივი თანამშრომლობის საკითხებიც განიხილეს. ყურადღება
+                           გამახვილდა საქართველოს ევროპუ
+                        </p>
+                     </div>
+                  </a
+                     >
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <a href="./news.html"
+                     >
+                     <div class="service">
+                        <img src="./image/icon_1.png" alt="" />
+                        <h5>სამინისტრო</h5>
+                        <p>
+                           მინისტრებმა საქართველოსა და რუმინეთის თავდაცვის უწყებებს შორის
+                           ორმხრივი თანამშრომლობის საკითხებიც განიხილეს. ყურადღება
+                           გამახვილდა საქართველოს ევროპუ
+                        </p>
+                     </div>
+                  </a
+                     >
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <a href="./news.html"
+                     >
+                     <div class="service">
+                        <img src="./image/icon_1.png" alt="" />
+                        <h5>სამინისტრო</h5>
+                        <p>
+                           მინისტრებმა საქართველოსა და რუმინეთის თავდაცვის უწყებებს შორის
+                           ორმხრივი თანამშრომლობის საკითხებიც განიხილეს. ყურადღება
+                           გამახვილდა საქართველოს ევროპუ
+                        </p>
+                     </div>
+                  </a
+                     >
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="bg-light" id="projects">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="intro">
+                     <h6>ჩვენი სამუშაო</h6>
+                     <h1>წარმატებული პროექტები</h1>
+                     <p class="mx-auto">
+                        საქართველოს თავდაცვის მინისტრი ჯუანშერ ბურჭულაძე რუმინეთის
+                        ეროვნული თავდაცვის მინისტრს ანგელ ტილვარს შეხვდა. უცხოელ
+                        კოლეგასთან შეხვედრა ბულგარეთში გაიმართა, სადაც თავდაცვის
+                        მინისტრები სამხრეთ-აღმოსავლეთ ევროპის თავდაცვის მინისტერიალში
+                        (SEDM) იღებენ მონაწილეობას.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="projects-slider" class="owl-theme owl-carousel">
+            <div class="project">
+               <div class="overlay"></div>
+               <img src="./image/project_1.jpg" alt="" />
+               <div class="content">
+                  <h2>საველე სწავლებები</h2>
+                  <h6>საბრძოლო მანევრები</h6>
+               </div>
+            </div>
+            <div class="project">
+               <div class="overlay"></div>
+               <img src="./image/project_2.jpg" alt="" />
+               <div class="content">
+                  <h2>საველე სწავლებები</h2>
+                  <h6>საბრძოლო მანევრები</h6>
+               </div>
+            </div>
+            <div class="project">
+               <div class="overlay"></div>
+               <img src="./image/project_3.jpg" alt="" />
+               <div class="content">
+                  <h2>საველე სწავლებები</h2>
+                  <h6>საბრძოლო მანევრები</h6>
+               </div>
+            </div>
+            <div class="project">
+               <div class="overlay"></div>
+               <img src="./image/project_4.jpg" alt="" />
+               <div class="content">
+                  <h2>საველე სწავლებები</h2>
+                  <h6>საბრძოლო მანევრები</h6>
+               </div>
+            </div>
+            <div class="project">
+               <div class="overlay"></div>
+               <img src="./image/project_5.jpg" alt="" />
+               <div class="content">
+                  <h2>საველე სწავლებები</h2>
+                  <h6>საბრძოლო მანევრები</h6>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="team">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="intro">
+                     <h6>გუნდი</h6>
+                     <h1>ჩვენი გუნდი</h1>
+                     <p class="mx-auto">
+                        საქართველოს თავდაცვის მინისტრი ჯუანშერ ბურჭულაძე რუმინეთის
+                        ეროვნული თავდაცვის მინისტრს ანგელ ტილვარს შეხვდა. უცხოელ
+                        კოლეგასთან შეხვედრა ბულგარეთში გაიმართა, სადაც თავდაცვის
+                        მინისტრები სამხრეთ-აღმოსავლეთ ევროპის თავდაცვის მინისტერიალში
+                        (SEDM) იღებენ მონაწილეობას.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-lg-4 col-md-8">
+                  <div class="team-member">
+                     <div class="image">
+                        <img src="./image/project_3.jpg" alt="" />
+                        <div class="social-icons">
+                           <a href="#"><i class="bx bxl-facebook"></i></a>
+                           <a href="#"><i class="bx bxl-twitter"></i></a>
+                           <a href="#"><i class="bx bxl-instagram"></i></a>
+                           <a href="#"><i class="bx bxl-pinterest"></i></a>
+                        </div>
+                        <div class="overlay"></div>
+                     </div>
+                     <h5>სახელი გვარი</h5>
+                     <p>სნაიპერი</p>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-8">
+                  <div class="team-member">
+                     <div class="image">
+                        <img src="./image/project_3.jpg" alt="" />
+                        <div class="social-icons">
+                           <a href="#"><i class="bx bxl-facebook"></i></a>
+                           <a href="#"><i class="bx bxl-twitter"></i></a>
+                           <a href="#"><i class="bx bxl-instagram"></i></a>
+                           <a href="#"><i class="bx bxl-pinterest"></i></a>
+                        </div>
+                        <div class="overlay"></div>
+                     </div>
+                     <h5>სახელი გვარი</h5>
+                     <p>სნაიპერი</p>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-8">
+                  <div class="team-member">
+                     <div class="image">
+                        <img src="./image/project_3.jpg" alt="" />
+                        <div class="social-icons">
+                           <a href="#"><i class="bx bxl-facebook"></i></a>
+                           <a href="#"><i class="bx bxl-twitter"></i></a>
+                           <a href="#"><i class="bx bxl-instagram"></i></a>
+                           <a href="#"><i class="bx bxl-pinterest"></i></a>
+                        </div>
+                        <div class="overlay"></div>
+                     </div>
+                     <h5>სახელი გვარი</h5>
+                     <p>სნაიპერი</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="bg-light" id="career">
+         <div class="owl-theme owl-carousel career-slider container">
+            <div class="review">
+               <div class="person">
+                  <img src="./image/team-1.jpg" alt="" />
+                  <h5>გენერალი</h5>
+                  <small>კარიერა</small>
+               </div>
+               <h3>
+                  საქართველოს თავდაცვის მინისტრი ჯუანშერ ბურჭულაძე რუმინეთის ეროვნული
+                  თავდაცვის მინისტრს ანგელ ტილვარს შეხვდა. უცხოელ კოლეგასთან შეხვედრა
+                  ბულგარეთში გაიმართა, სადაც თავდაცვის მინისტრები სამხრეთ-აღმოსავლეთ
+                  ევროპის თავდაცვის მინისტერიალში (SEDM) იღებენ მონაწილეობას.
+               </h3>
+               <div class="stars">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star-half"></i>
+               </div>
+               <i class="bx bxs-quote-alt-left"></i>
+            </div>
+            <div class="review">
+               <div class="person">
+                  <img src="./image/team-1.jpg" alt="" />
+                  <h5>თავდაცვის მინისტრი</h5>
+                  <small>კარიერა</small>
+               </div>
+               <h3>
+                  საქართველოს თავდაცვის მინისტრი ჯუანშერ ბურჭულაძე რუმინეთის ეროვნული
+                  თავდაცვის მინისტრს ანგელ ტილვარს შეხვდა. უცხოელ კოლეგასთან შეხვედრა
+                  ბულგარეთში გაიმართა, სადაც თავდაცვის მინისტრები სამხრეთ-აღმოსავლეთ
+                  ევროპის თავდაცვის მინისტერიალში (SEDM) იღებენ მონაწილეობას.
+               </h3>
+               <div class="stars">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star-half"></i>
+               </div>
+               <i class="bx bxs-quote-alt-left"></i>
+            </div>
+            <div class="review">
+               <div class="person">
+                  <img src="./image/team-1.jpg" alt="" />
+                  <h5>თავდაცვის მინისტრი</h5>
+                  <small>კარიერა</small>
+               </div>
+               <h3>
+                  საქართველოს თავდაცვის მინისტრი ჯუანშერ ბურჭულაძე რუმინეთის ეროვნული
+                  თავდაცვის მინისტრს ანგელ ტილვარს შეხვდა. უცხოელ კოლეგასთან შეხვედრა
+                  ბულგარეთში გაიმართა, სადაც თავდაცვის მინისტრები სამხრეთ-აღმოსავლეთ
+                  ევროპის თავდაცვის მინისტერიალში (SEDM) იღებენ მონაწილეობას.
+               </h3>
+               <div class="stars">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star-half"></i>
+               </div>
+               <i class="bx bxs-quote-alt-left"></i>
+            </div>
+         </div>
+      </section>
+
+      <footer>
+         <div class="footer-top text-center">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-lg-6 text-center footer-flex">
+                     <img src="./image/Logo.png" alt="" />
+                     <div class="footer-partners">
+                        <h5 class="help-links">დაგეგმილი ღონისძიებები</h5>
+                        <p>საველე მზადება</p>
+                        <p>საველე მზადება</p>
+                        <p>საველე მზადება</p>
+                        <p>საველე მზადება</p>
+                        <p>საველე მზადება</p>
+                     </div>
+                     <div>
+                        <h5 class="help-links">დამხმარე ბმულები</h5>
+                        <div class="col-auto social-icons help">
+                           <a href="#"><i class="bx bxl-facebook"></i></a>
+                           <a href="#"><i class="bx bxl-twitter"></i></a>
+                           <a href="#"><i class="bx bxl-instagram"></i></a>
+                           <a href="#"><i class="bx bxl-facebook"></i></a>
+                           <a href="#"><i class="bx bxl-twitter"></i></a>
+                           <a href="#"><i class="bx bxl-instagram"></i></a>
+                           <a href="#"><i class="bx bxl-instagram"></i></a>
+                           <a href="#"><i class="bx bxl-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom text-center">
+            <p class="mb-0">
+               © 2018-2021 ყველა უფლება დაცულია საქართველოს თავდაცვის სამინისტროს
+               მიერ
+            </p>
+         </div>
+      </footer>
+      <!-- Modal -->
+      <div
+         class="modal fade"
+         id="exampleModal"
+         tabindex="-1"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true"
+         >
+         <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+               <div class="modal-body p-0">
+                  <div class="container-fluid">
+                     <div class="row gy-4">
+                        <div
+                           class="col-lg-4 col-sm-12 bg-cover"
+                           style="background-image: url(img/c2.jpg); min-height: 300px"
+                           >
+                           <div class="modal-image"></div>
+                        </div>
+                        <div class="col-lg-8">
+                           <form class="p-lg-5 col-12 row g-3">
+                              <div>
+                                 <h1>შეუერთდი ჯარს</h1>
+                                 <p>შეავსე ფორმა და დაგიკავშირდებით</p>
+                              </div>
+                              <div class="col-lg-6">
+                                 <label for="userName" class="form-label">სახელი</label>
+                                 <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="სახელი"
+                                    id="userName"
+                                    aria-describedby="emailHelp"
+                                    />
+                              </div>
+                              <div class="col-lg-6">
+                                 <label for="userName" class="form-label">გვარი</label>
+                                 <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="გვარი"
+                                    id="userName"
+                                    aria-describedby="emailHelp"
+                                    />
+                              </div>
+                              <div class="col-12">
+                                 <label for="userName" class="form-label">ელ-ფოსტა</label>
+                                 <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="სახელიგვარი@example.com"
+                                    id="userName"
+                                    aria-describedby="emailHelp"
+                                    />
+                              </div>
+                              <div class="col-12">
+                                 <label for="exampleInputEmail1" class="form-label"
+                                    >დაგვიტოვე წერილი</label
+                                    >
+                                 <textarea
+                                    name=""
+                                    placeholder="დაწერე წერილი ..."
+                                    class="form-control"
+                                    id=""
+                                    rows="4"
+                                    ></textarea>
+                              </div>
+                              <div class="col-12">
+                                 <button type="submit" class="btn btn-brand">
+                                 გაგზავნა
+                                 </button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-     
-    </footer>
-   
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init();</script>
-       <script src="./actions.js"></script>
-    </div>
-  </body>
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/owl.carousel.min.js"></script>
+      <script src="./js/app.js"></script>
+   </body>
 </html>
